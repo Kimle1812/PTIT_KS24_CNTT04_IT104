@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = 5;
+        console.log(a);
+        
+        const arr = [1,2,3,4,5];
+        for(let i = 0; i < arr.length;i++){
+            console.log(arr[i]);
+            
+        }
+        // const a = 10;
+        console.log(a);
+        
+        arr[arr.length] = 20;
+        for(let i = 0; i < arr.length;i++){
+            console.log(arr[i]);
+            
+        }
+        //Khi khai báo lại biến a bị lỗi vì biến a đã được khai báo trước đó, const không thể khai báo lại
+        //Khi thêm vào mảng arr không bị lỗi vì mảng là đối tượng có thể thay đổi kích thước và nội dung nen có thể thêm phần tử vào cuối cùng
+
+    </script>
+</body>
+</html>

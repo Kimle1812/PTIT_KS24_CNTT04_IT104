@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createUser (name, age = 18, role = "user") {
+            return {
+                name: name,
+                age: age,
+                role: role,
+            };
+        };
+        const user1= createUser("Dev");
+        console.log(user1);
+        
+        const user2 = createUser("Nguyen Van A", 30, "Admin");
+        console.log(user2);
+        
+    </script>
+</body>
+</html>

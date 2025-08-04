@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const response = {
+            data: {
+                id: 1,
+                title: "Destructuring in JavaScript",
+                author: {
+                    name: "Dev",
+                    email: "Dev@gmail.com",
+                },
+            },
+        };
+        function extractData({ data }) {
+            const {title, author} =response.data;
+            const{name, email} = response.data.author;
+            console.log(`Title: ${title}`);
+            console.log(`Author: ${author}`);
+            console.log(`Author Name: ${name}`);
+            console.log(`Author Email: ${email}`);
+        }
+        extractData(response);
+    </script>
+</body>
+</html>

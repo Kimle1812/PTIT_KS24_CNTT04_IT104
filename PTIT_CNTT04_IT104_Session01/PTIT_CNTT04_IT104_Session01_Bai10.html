@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function groupWords(words) {
+            let map = {};
+
+            for (let word of words) {
+                let sorted = word.split('').sort().join('');
+                if (map[sorted]) {
+                map[sorted].push(word);
+                } else {
+                map[sorted] = [word];
+                }
+            }
+
+            return Object.values(map);
+        }
+        let input = ["eat", "tea", "tan", "ate", "nat", "bat"];
+        let output = groupWords(input);
+        console.log(output);
+    </script>
+</body>
+</html>

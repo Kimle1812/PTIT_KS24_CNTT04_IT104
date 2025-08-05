@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getOrderSummary(products) {
+            let totalBeforeDiscount = 0;
+            let totalAfterDiscount = 0;
+            const details = [];
+
+            for (const product of products) {
+                const { name, price, discount, quantity, bulkDiscount } = product;
+                totalBeforeDiscount += price * quantity;
+                let totalDiscount = discount;
+                if (bulkDiscount && quantity >= bulkDiscount.minQuantity) {
+                    totalDiscount += bulkDiscount.extraDiscount;
+                }
+                const finalPrice = Math.round(price * (1 - totalDiscount));
+                const subtotal = finalPrice * quantity;
+                totalAfterDiscount += subtotal;
+                details.push({
+                    name,
+                    finalPrice,
+                    quantity,
+                    subtotal,
+                });
+            }
+
+            return {
+                totalBeforeDiscount,
+                totalAfterDiscount,
+                details,
+            };
+        }
+        const products = [
+            { name: "A", price: 100, discount: 0.1, quantity: 2 },
+            { name: "B", price: 200, discount: 0.2, quantity: 1, bulkDiscount: { minQuantity: 2, extraDiscount: 0.05 } },
+            { name: "C", price: 300, discount: 0, quantity: 3, bulkDiscount: { minQuantity: 3, extraDiscount: 0.1 } }
+        ];
+
+        const summary = getOrderSummary(products);
+        console.log(summary);
+    </script>
+</body>
+</html>

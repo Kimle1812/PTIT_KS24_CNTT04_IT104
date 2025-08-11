@@ -63,22 +63,25 @@ class __Library {
 }
 }
 
-let _b1 = new __Book (1, "Q1", "Giải tích");
-let _b2 = new __Book (2, "Q2", "Doraemon");
-let _b3 = new __Book (3, "Q3", "Hồ sơ máu");
-let _b4 = new __Book (4, "Q4", "Tam quốc diễn nghĩa");
-let _b5 = new __Book (5, "Q5", "Cho tôi một vé về tuổi thơ");
+let book11 = new __Book (11, "Lập trình C cơ bản", "Nguyễn Văn A");
+let book12 = new __Book (12, "JavaScript nâng cao", "Trần Thị B");
+let book13 = new __Book (13, "Python cho người mới bắt đầu", "Lê Văn C");
+let book14 = new __Book (14, "Thuật toán và cấu trúc dữ liệu", "Phạm Thị D");
+let book15 = new __Book (15, "Lập trình hướng đối tượng với Java", "Hoàng Văn E");
 
-let __library = new __Library();
-__library.addBook(_b1);
-__library.addBook(_b2);
-__library.addBook(_b3);
-__library.addBook(_b4);
-__library.addBook(_b5);
-__library.printBook();
+let library1 = new __Library();
+library1.addBook(book11);
+library1.addBook(book12);
+library1.addBook(book13);
+library1.addBook(book14);
+library1.addBook(book15);
 
-__library.updateBook(1, "Q1", "Lập trình hướng đối tượng");
+console.log("Danh sách ban đầu:");
+library1.printBook();
+
+library1.updateBook(12, "JavaScript Pro", "Trần Thị Bích");
 console.log("Sau cập nhật:");
-__library.printBook();
+library1.printBook();
 
-__library.seachBook("Giải");
+console.log("Kết quả tìm kiếm:");
+library1.seachBook("Lập trình");

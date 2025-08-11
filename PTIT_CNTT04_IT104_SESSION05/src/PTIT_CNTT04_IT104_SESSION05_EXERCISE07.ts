@@ -50,20 +50,22 @@ class _Library {
     }
 }
 
-let b1 = new _Book (1, "Q1", "Giải tích");
-let b2 = new _Book (2, "Q2", "Doraemon");
-let b3 = new _Book (3, "Q3", "Hồ sơ máu");
-let b4 = new _Book (4, "Q4", "Tam quốc diễn nghĩa");
-let b5 = new _Book (5, "Q5", "Cho tôi một vé về tuổi thơ");
+let book6 = new _Book (6, "Lập trình C cơ bản", "Nguyễn Văn A");
+let book7 = new _Book (7, "JavaScript nâng cao", "Trần Thị B");
+let book8 = new _Book (8, "Python cho người mới bắt đầu", "Lê Văn C");
+let book9 = new _Book (9, "Thuật toán và cấu trúc dữ liệu", "Phạm Thị D");
+let book10 = new _Book (10, "Lập trình hướng đối tượng với Java", "Hoàng Văn E");
 
 let _library = new _Library();
-_library.addBook(b1);
-_library.addBook(b2);
-_library.addBook(b3);
-_library.addBook(b4);
-_library.addBook(b5);
+_library.addBook(book6);
+_library.addBook(book7);
+_library.addBook(book8);
+_library.addBook(book9);
+_library.addBook(book10);
+
+console.log("Danh sách ban đầu:");
 _library.printBook();
 
-_library.updateBook(1, "Q1", "Lập trình hướng đối tượng");
+_library.updateBook(7, "JavaScript Pro", "Trần Thị Bích");
 console.log("Sau cập nhật:");
 _library.printBook();

@@ -88,28 +88,33 @@ class ___Library {
     }
 }
 
-let __b1 = new ___Book(1, "Q1", "Giải tích", 2010);
-let __b2 = new ___Book(2, "Q2", "Doraemon", 2005);
-let __b3 = new ___Book(3, "Q3", "Hồ sơ máu", 2018);
-let __b4 = new ___Book(4, "Q4", "Tam quốc diễn nghĩa", 1990);
-let __b5 = new ___Book(5, "Q5", "Cho tôi một vé về tuổi thơ", 2012);
+let book16 = new ___Book(16, "Lập trình C cơ bản", "Nguyễn Văn A", 2010);
+let book17 = new ___Book(17, "JavaScript nâng cao", "Trần Thị B", 2015);
+let book18 = new ___Book(18, "Python cho người mới bắt đầu", "Lê Văn C", 2018);
+let book19 = new ___Book(19, "Thuật toán và cấu trúc dữ liệu", "Phạm Thị D", 2021);
+let book20 = new ___Book(20, "Lập trình hướng đối tượng với Java", "Hoàng Văn E", 2022);
 
-let ___library = new ___Library();
-___library.addBook(__b1);
-___library.addBook(__b2);
-___library.addBook(__b3);
-___library.addBook(__b4);
-___library.addBook(__b5);
+let library2 = new ___Library();
+library2.addBook(book16);
+library2.addBook(book17);
+library2.addBook(book18);
+library2.addBook(book19);
+library2.addBook(book20);
 
-___library.printBook();
+console.log("Danh sách ban đầu:");
+library2.printBook();
 
-___library.updateBook(1, "Q1", "Lập trình hướng đối tượng");
-___library.printBook();
+library2.updateBook(16, "Lập trình C cơ bản - Phiên bản mới", "Nguyễn Văn A+");
+console.log("Sau cập nhật:");
+library2.printBook();
 
-___library.seachBook("Giải");
+console.log("Kết quả tìm kiếm:");
+library2.seachBook("Lập trình");
 
-___library.updateBookById(2, "Doraemon - Tập đặc biệt", "Fujiko F. Fujio", 2020);
-___library.printBook();
+library2.updateBookById(17, "JavaScript Pro", "Trần Thị Bích", 2024);
+console.log("Sau cập nhật năm xuất bản:");
+library2.printBook();
 
-___library.deleteBookById(3);
-___library.printBook();
+library2.deleteBookById(18);
+console.log("Sau khi xóa:");
+library2.printBook();

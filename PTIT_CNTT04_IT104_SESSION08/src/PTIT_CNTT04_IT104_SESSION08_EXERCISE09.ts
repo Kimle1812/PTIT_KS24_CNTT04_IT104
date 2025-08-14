@@ -1,9 +1,8 @@
 function _flatten<T>(arr: T[]): T[] {
     const result: T[] = [];
     for (let i = 0; i < arr.length; i++) {
-        const element = arr[i];
         if (Array.isArray(element)) {
-            result.push(..._flatten<any>(element));
+            result.push(..._flatten<T>(element));
         } else {
             result.push(element);
         }

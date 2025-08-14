@@ -1,6 +1,6 @@
 function _flatten<T>(arr: T[]): T[] {
     const result: T[] = [];
-    for (let i = 0; i < arr.length; i++) {
+    for (const element of arr) {
         if (Array.isArray(element)) {
             result.push(..._flatten<T>(element));
         } else {

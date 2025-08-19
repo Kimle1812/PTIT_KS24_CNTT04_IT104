@@ -1,0 +1,99 @@
+.color_box{
+  display: flex;
+  align-items: start;
+}
+.color_box_red{
+  width: 200px;
+  height: 200px;
+  color:white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  margin: 20px;
+}
+
+.color_box_blue{
+  width: 200px;
+  height: 200px;
+  color:white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  margin: 20px;
+}
+.color_box_green{
+  width: 200px;
+  height: 200px;
+  color:white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  margin: 20px;
+}
+/* Bài 8 */
+.table-container {
+  padding: 20px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-table thead {
+  background-color: #f9fafb;
+  font-weight: bold;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-edit {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.btn-edit:hover {
+  background-color: #e5e7eb;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
